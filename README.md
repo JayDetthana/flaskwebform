@@ -1,6 +1,6 @@
-# Flask Web Form
+# Flask Web Structure
 
-# Flask Form
+# Flask Structure
 
 	
 templates
