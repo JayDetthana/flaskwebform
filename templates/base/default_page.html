@@ -1,10 +1,38 @@
 {% extends "base/base_layout.html" %}
 {% block body %}
-
-<div class="ui segment">
-    From default_page.html
+<div class="ui top attached demo menu">
+        <a class="item">
+          <i class="sidebar icon"></i> Menu
+        </a>
 </div>
-{% block content %}{% endblock content %}
+<div class="ui bottom attached segment">
+    <div class="ui sidebar vertical menu">
+        <a class="item">
+            <i class="home icon"></i> Home
+        </a>
+        <a class="item">
+            item
+        </a>
+        <a class="item">
+            item
+        </a>
+        <a class="item">
+            item
+        </a>
+    </div>
+    <div class="pusher">
+        <div class="ui basic segment">
+            {% block content %} {% endblock content %}
+        </div>
+    </div>
+</div>
+
+<script>
+    $('.ui.sidebar').sidebar({
+        context: $('.bottom.segment')
+      })
+      .sidebar('attach events', '.menu .item');
+</script>
         
 
 
